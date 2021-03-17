@@ -1,4 +1,5 @@
 import { FormEvent, useState } from 'react';
+import { api } from '../../services/api';
 
 import Modal from 'react-modal';
 import closeImg from '../../assets/close.svg';
@@ -21,6 +22,15 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
 
     function handleCreateNewTransaction(event: FormEvent) {
         event.preventDefault();
+
+        const data = {
+            title,
+            value,
+            category,
+            type,
+        };
+
+        api.post('/transactions', data);
     }
 
     return (
