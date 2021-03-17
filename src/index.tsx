@@ -14,17 +14,17 @@ createServer({
         {
           id: 1,
           title: 'Title',
-          type: 'Deposit',
+          type: 'deposit',
           category: 'Category',
-          amount: '0000',
+          amount: '1000',
           createdAt: new Date('2021-03-17 12:00:00'),
         },
         {
           id: 2,
           title: 'Title 2',
-          type: 'Deposit 2',
+          type: 'withdraw',
           category: 'Category 2',
-          amount: '0000',
+          amount: '500',
           createdAt: new Date('2021-03-16 12:00:00'),
         }
       ]
